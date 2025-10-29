@@ -278,7 +278,9 @@ def main():
             q = item["question"]
             choices = ensure_letter_choices(item["choices"])
             rel = item["video_path"]
-            vpath = rel if os.path.isabs(rel) else os.path.join(args.videos_root, rel)
+            # Lấy tên file (bỏ thư mục cha nếu có)
+            filename = os.path.basename(rel)
+            vpath = os.path.join(args.videos_root, filename) if not os.path.isabs(rel) else rel
 
             try:
                 ans = vlm.answer_mcq(
