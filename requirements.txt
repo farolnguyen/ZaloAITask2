@@ -1,0 +1,18 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.35.0
+accelerate>=0.20.0
+
+# Video processing
+decord>=0.6.0
+
+# Quantization (8-bit)
+bitsandbytes>=0.41.0
+
+# Image processing
+Pillow>=9.0.0
+
+# Utilities
+numpy>=1.21.0
+einops>=0.6.0
